@@ -217,7 +217,7 @@ nav.navbar.bootsnav ul.nav > li > a {
     justify-content: center;
     position: relative;
     background: url(../images/vagwat.jpg) no-repeat;
-    background-size: contain; /* Ensures the entire image is visible without cropping */
+    background-size: cover; /* Make sure the image covers the section */
     background-position: center;
     background-color: #f3b919; /* Optional: Fills any empty space around the image */
     height: 890px;
@@ -244,15 +244,14 @@ nav.navbar.bootsnav ul.nav > li > a {
     background: rgba(212, 199, 184, 0.356); /* Darker overlay on hover */
 }
 
-/* Optional: Adjust text or button inside the hero if needed */
-.welcome-hero .hero-text {
-    z-index: 1; /* Ensures content stays on top of the background */
+.welcome-hero .header-text {
+    z-index: 1; /* Ensures the content stays on top of the background */
     padding: 20px;
     color: #fff;
     text-align: center;
     font-size: 24px;
+    position: relative;
 }
-
 
 /*.header-text-area*/
 .header-text h2 {
