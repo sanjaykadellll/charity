@@ -217,7 +217,7 @@ nav.navbar.bootsnav ul.nav > li > a {
     justify-content: center;
     position: relative;
     background: url(../images/vagwat.jpg) no-repeat;
-    background-size: cover; /* Make sure the image covers the section */
+    /* background-size: contain; Ensures the entire image is visible without cropping */
     background-position: center;
     background-color: #f3b919; /* Optional: Fills any empty space around the image */
     height: 890px;
@@ -244,14 +244,15 @@ nav.navbar.bootsnav ul.nav > li > a {
     background: rgba(212, 199, 184, 0.356); /* Darker overlay on hover */
 }
 
-.welcome-hero .header-text {
-    z-index: 1; /* Ensures the content stays on top of the background */
+/* Optional: Adjust text or button inside the hero if needed */
+.welcome-hero .hero-text {
+    z-index: 1; /* Ensures content stays on top of the background */
     padding: 20px;
     color: #fff;
     text-align: center;
     font-size: 24px;
-    position: relative;
 }
+
 
 /*.header-text-area*/
 .header-text h2 {
@@ -416,9 +417,84 @@ nav.navbar.bootsnav ul.nav > li > a {
     transition: transform 0.3s ease;
 }
 
-/* Hover effect for poster image */
 .poster-image:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Zooms in the image */
+}
+/* Hover effect for poster image */
+/* Logs */
+.logs {
+    padding: 50px 0 100px;
+}
+
+.logs-content {
+    padding-top: 100px;
+}
+
+.single-log-txt h3 {
+    font-size: 24px;
+    color: #3c4258;
+    text-transform: initial;
+    line-height: 1.8;
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.single-log-txt p {
+    font-size: 18px;
+    color: #2b2c31;
+    padding: 20px 0;
+    line-height: 1.6;
+    border-bottom: 1px solid #999fb3;
+    margin-bottom: 30px; /* Adds space below the paragraph */
+}
+
+.single-log-img {
+    position: relative;
+    box-shadow: 0 5px 30px rgba(14, 25, 80, 0.30);
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden;
+}
+
+.single-log-img:before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 44, 108, 0.3);
+    transition: background 0.3s ease;
+}
+
+.single-log-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+
+.single-log-img:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.single-log-img:hover:before {
+    background: rgba(31, 44, 108, 0.5); /* Darken overlay on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .single-log-txt h3 {
+        font-size: 20px;
+    }
+    .single-log-txt p {
+        font-size: 16px;
+    }
+    .single-log-img {
+        box-shadow: 0 4px 15px rgba(14, 25, 80, 0.30);
+    }
+    .single-log-img img {
+        height: 350px;
+    }
 }
 
 /* Poster Description */
