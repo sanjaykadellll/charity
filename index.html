@@ -52,30 +52,30 @@
 			<div class="header-area">
 				<!-- Start Navigation -->
 			    <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
-
-			        <div class="container">
-
-			            <!-- Start Header Navigation -->
-			            <div class="navbar-header">
-			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-			                    <i class="fa fa-bars"></i>
-			                </button>
-			                <a class="navbar-brand" href="index.html">श्रीमद्‍भागवत सप्ताह ज्ञान महायज्ञ</a>
-			            </div><!--/.navbar-header-->
-			            <!-- End Header Navigation -->
-
-			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-			                <li class=" smooth-menu active"></li>
-			                    <li class="smooth-menu"><a href="#about"> के को लागि</a></li>
-			                    <li class="smooth-menu"><a href="#invitation">आमन्त्रण</a></li>
-			                    <li class="smooth-menu"><a href="#contact">सम्पर्क </a></li>
-			                </ul><!--/.nav -->
-			            </div><!-- /.navbar-collapse -->
-			        </div><!--/.container-->
-			    </nav><!--/nav-->
-			    <!-- End Navigation -->
+					<div class="container">
+						<!-- Header Navigation -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+								<i class="fa fa-bars"></i>
+							</button>
+							<a class="navbar-brand" href="index.html">
+								<img src="assets/images/logo.png" alt="profile_image" class="navbar-logo">
+							</a>
+						</div>
+				
+						<!-- Navigation Menu -->
+						<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+							<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+								<li class="smooth-menu"><a href="#about">के को लागि</a></li>
+								<li class="smooth-menu active"><a href="#welcome-hero">गृहपृष्ठ</a></li>
+								<li class="smooth-menu active"><a href="#pristhabhumi">पृष्ठभूमि</a></li>
+								<li class="smooth-menu"><a href="#invitation">आमन्त्रण</a></li>
+								<li class="smooth-menu"><a href="#contact">सम्पर्क</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				  <!-- End Navigation -->
 			</div><!--/.header-area-->
 
 		    <div class="clearfix"></div>
@@ -97,42 +97,168 @@
 
 		</section><!--/.welcome-hero-->
 		<!--welcome-hero end -->
-
+	
 		<!--about start -->
 		<section id="about" class="about">
-			<!-- <div class="section-heading text-center">
-				<h2>about me</h2>
-			</div> -->
-			<div class="container">
-				<div class="about-content">
-					<div class="row">
-						<!-- Left Text Section -->
-						<div class="col-lg-6 col-md-6 col-sm-12">
-							<div class="single-about-txt">
-								<h3>
-									श्रीमद्भागवत ज्ञान महायज्ञ के को लागि ? 
-								</h3>
+					<style>
+						* {
+							margin: 0;
+							padding: 0;
+							box-sizing: border-box;
+						}
+				
+						body {
+							font-family: 'Arial', sans-serif;
+							line-height: 1.6;
+							background: #f5f5f5;
+						}
+				
+						.magazine {
+							max-width: 1200px;
+							margin: 40px auto;
+							padding: 20px;
+							background: white;
+							box-shadow: 0 0 20px rgba(0,0,0,0.1);
+						}
+				
+						.headline {
+							grid-area: header;
+							font-size: 48px;
+							font-weight: 900;
+							color: #222;
+							margin-bottom: 30px;
+							padding: 20px;
+							text-align: center;
+							border-bottom: 3px solid #222;
+						}
+				
+						.magazine-grid {
+							display: grid;
+							grid-template-areas:
+								"header header header"
+								"img1 text text"
+								"img2 text text";
+							gap: 30px;
+							padding: 20px;
+						}
+				
+						.image1 {
+							grid-area: img1;
+							width: 100%;
+							height: 300px;
+							object-fit: cover;
+							transition: transform 0.3s ease;
+						}
+				
+						.image2 {
+							grid-area: img2;
+							width: 100%;
+							height: 300px;
+							object-fit: cover;
+							transition: transform 0.3s ease;
+						}
+				
+						.image1:hover, .image2:hover {
+							transform: scale(1.02);
+						}
+				
+						.text-content {
+							grid-area: text;
+							font-size: 18px;
+							line-height: 1.8;
+							color: #333;
+							padding: 20px;
+							background: #fff;
+							border-left: 3px solid #222;
+						}
+				
+						.text-content p {
+							margin-bottom: 20px;
+							text-align: justify;
+						}
+				
+						.text-content p:first-letter {
+							font-size: 3.5em;
+							float: left;
+							padding-right: 8px;
+							line-height: 1;
+							color: #222;
+							font-family: Georgia, serif;
+						}
+				
+						@media (max-width: 968px) {
+							.magazine-grid {
+								grid-template-areas:
+									"header"
+									"img1"
+									"img2"
+									"text";
+							}
+				
+							.headline {
+								font-size: 36px;
+							}
+				
+							.text-content {
+								border-left: none;
+								border-top: 3px solid #222;
+							}
+						}
+				
+						@media (max-width: 480px) {
+							.headline {
+								font-size: 28px;
+							}
+				
+							.text-content {
+								font-size: 16px;
+							}
+						}
+					</style>
+					<div class="magazine">
+						<div class="magazine-grid">
+							<h1 class="headline">श्रीमद्भागवत ज्ञान महायज्ञ के को लागि ?</h1>
+							<img  class="image1"  src="assets/images/content/kidsplaying2.jpeg" alt="profile_image">
+							<img class="image2" src="assets/images/content/hostel.jpeg" alt="profile_image">
+							<div class="text-content">
 								<p>
-									जुनसुकै समाज र देशको भविष्य उज्जवल बनाउने आधार नै सामुदायिक विद्यालय हुन् । नेपालको सन्दर्भमा भने सामुदायिक विद्यालय आज सबैभन्दा उपेक्षित, अपहेलित, जीर्ण, अकर्मण्यता ग्रस्त थलो बन्दै गएको आभाष गर्न थालिएको छ । ज्ञान, सीप र विद्याको पवित्र स्थलको साख र पहिचान कायम गरी समयको माग अनुसारको ब्यवहारिक एवम् जीवनोपयोगी शिक्षा हाम्रा सामुदायिक विद्यालयले दिन सकेका छैनन् । अतः भोलिको असल नागरिक निर्माण र उत्पादनको सवालमा सामुदायिक विद्यालय खरो उत्रन नसकेको तीतो यथार्थ हामीले मनन गर्नैपर्ने बेला आइसकेको छ । यसको संवैधानिक एवम् कानूनी अभिभारा स्थानीय सरकारले वहन गर्दै आएकोमा अपुग श्रोत व्यवस्थापनको लागि यस किसिमको नागरिक अभियान अस्तित्वमा आउनु अनिवार्य छ । सरकारले मात्र सबैथोक गर्न सक्दैन । हामीले पनि सघाउनु पर्छ भन्ने नागरिक चेतनाको विकास बेनीघाट रोराङ गाउँपालिकाको नागरिकमा भइसकेको छ । सुशासन र नागरिक केन्द्रित शासनको सवालमा नमुना स्थानीय सरकारको पहिचान बनाएको बेनीघाट रोराङ गाउँपालिकाको नागरिक हुनु संयोग होइन, यो एक जिम्मेवारी पनि हो । यसलाई अत्यत्न गम्भीरताका साथ महसुस गरेको छौँ । अतः सहभागितामुलक शासन र विकासको अनुरकरणीय उदाहरण बन्ने अभियानको नेतृत्व समुदाय स्वयम्ले पनि गर्नैपर्ने ठहर हाम्रो छ ।   
+									जुनसुकै समाज र देशको भविष्य उज्जवल बनाउने आधार नै सामुदायिक विद्यालय हुन् । नेपालको सन्दर्भमा भने सामुदायिक विद्यालय आज सबैभन्दा उपेक्षित, अपहेलित, जीर्ण, अकर्मण्यता ग्रस्त थलो बन्दै गएको आभाष गर्न थालिएको छ । ज्ञान, सीप र विद्याको पवित्र स्थलको साख र पहिचान कायम गरी समयको माग अनुसारको ब्यवहारिक एवम् जीवनोपयोगी शिक्षा हाम्रा सामुदायिक विद्यालयले दिन सकेका छैनन् । अतः भोलिको असल नागरिक निर्माण र उत्पादनको सवालमा सामुदायिक विद्यालय खरो उत्रन नसकेको तीतो यथार्थ हामीले मनन गर्नैपर्ने बेला आइसकेको छ ।
 								</p>
-							
-							</div>
-						</div>
-						
-						<!-- Right Image Section -->
-						<div class="col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-sm-12">
-							<div class="single-about-img">
-								<img src="assets/images/poster.jpg" alt="profile_image">
+								<p>
+									यसको संवैधानिक एवम् कानूनी अभिभारा स्थानीय सरकारले वहन गर्दै आएकोमा अपुग श्रोत व्यवस्थापनको लागि यस किसिमको नागरिक अभियान अस्तित्वमा आउनु अनिवार्य छ । सरकारले मात्र सबैथोक गर्न सक्दैन । हामीले पनि सघाउनु पर्छ भन्ने नागरिक चेतनाको विकास बेनीघाट रोराङ गाउँपालिकाको नागरिकमा भइसकेको छ । सुशासन र नागरिक केन्द्रित शासनको सवालमा नमुना स्थानीय सरकारको पहिचान बनाएको बेनीघाट रोराङ गाउँपालिकाको नागरिक हुनु संयोग होइन, यो एक जिम्मेवारी पनि हो । यसलाई अत्यत्न गम्भीरताका साथ महसुस गरेको छौँ । अतः सहभागितामुलक शासन र विकासको अनुरकरणीय उदाहरण बन्ने अभियानको नेतृत्व समुदाय स्वयम्ले पनि गर्नैपर्ने ठहर हाम्रो छ ।
+								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			
-			
+			</div>	
 		</section><!--/.about-->
 		<!--about end -->
 		<!--about start -->
+
+		<section id="pristhabhumi" class="section-about">
+            <div class="container">
+                <div class="about-content">
+                    <h1 class="section-title">पृष्ठभूमि</h1>
+                    <div class="row">
+                        <!-- Left Text Section -->
+                        <div class="col-lg-6 col-md-6 col-sm-12 about-text">
+                            <p>
+                                धादिङ जिल्लाको दक्षिण पश्चिममा रहेका साविकका जोगिमारा¸ धुषा¸ वेनीघाट र महादेवस्थान गा.वि.स.हरु मिलेर वनेको वेनीघाट रोराङ गाउँपालिका उत्तरमा पृथ्वी राजमार्ग देखी दक्षिणमा महाभारत श्रृखला सम्म फैलिएको छ । 
+                                यस गाउँपालिकाको पूर्वमा गजुरी गा.पा. र मकवानपुर जिल्ला¸ पश्चिममा चितवन जिल्ला¸ उत्तरमा सिद्धलेक गा.पा.¸ गोरखा र चितवन जिल्ला तथा दक्षिणमा चितवन र मकवानपुर जिल्ला पर्दछन । 
+                                कुल १० वटा वडामा विभाजित यस गा.पा. २०६.५२ वर्ग कि.मी. क्षेत्रफलमा फैलिएको छ । 
+                                विभिन्न जात जाती¸ भाषा भाषी तथा धर्म सस्कृतिको फुलवारीको रुपमा रहेको यस गा.पा.मा २०७८ सालको जनगणना अनुसार ३३८५४ जनाको वसोवास रहेको छ ।
+                            </p>
+                        </div>
+                        <!-- Right Image Section -->
+                        <div class="col-lg-5 offset-lg-1 col-md-5 offset-md-1 col-sm-12 about-image">
+                            <img src="assets/images/map.jpg" alt="Map of गाउँपालिका">
+                        </div>
+                    </div>
+                
+        </section>
+
+
 		<section id="invitation" class="invitation">
     <div class="section-heading text-center">
         <h2>आमन्त्रण</h2>

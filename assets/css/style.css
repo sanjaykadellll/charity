@@ -23,7 +23,7 @@ body{
 	font-family: 'Kalimati';
 	font-size:16px;
 	color: #676a81;
-	background: #f3aa0bc5;
+	background: #e2fa0800;
     max-width:1920px;
     margin:0 auto;
 	overflow-x:hidden;
@@ -86,83 +86,127 @@ html,body{
     position: relative;
     z-index: 9999;
 }
-@media (min-width: 1024px){}
+/* Navbar Base Styles */
 nav.navbar.bootsnav.no-background {
-    background-color: #e4b995a8;
+    background-color: rgba(228, 185, 149, 0.95);
     border: none;
+    box-shadow: 0 4px 10px #e68e0ab6;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 nav.navbar.bootsnav {
-    background-color: #e7a20daf;
-    border-bottom: transparent;
-    box-shadow: 0 3px 15px rgba(0,0,0,.2);
+    padding: 10px 0;
 }
 
-/*.navbar-brand*/
-.navbar-header a.navbar-brand,.navbar-header a.navbar-brand:hover,.navbar-header a.navbar-brand:focus {
-    display: inline-block;
-    color: #d1af19;
-    font-size: 32px;
-    font-weight: 600;
-    padding: 33px 0px 57px;
-    text-transform: uppercase;
+/* Logo Styles */
+.navbar-header .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0;
 }
-/*.navbar-brand*/
 
-/*.nav li*/
+.navbar-header .navbar-logo {
+    max-height: 150px;
+    filter: brightness(1.2);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-header .navbar-logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.5);
+}
+
+/* Navbar Links */
 nav.navbar.bootsnav ul.nav > li > a {
-    font-size: 24px;
-    font-weight: 400;
-    text-transform:uppercase;
-    -webkit-transition: 0.3s linear; 
-    -moz-transition: 0.3s linear; 
-    -ms-transition: 0.3s linear; 
-    -o-transition: 0.3s linear; 
-    transition: 0.3s linear;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 15px 20px;
+    color: #333;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
-nav.navbar.bootsnav ul.nav > li > a {padding: 35px 20px;}
-nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:focus,nav.navbar.bootsnav ul.nav > li.active>a{color: #f9a02c;}
 
-nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after {
-    content: "";
+nav.navbar.bootsnav ul.nav > li > a:hover,
+nav.navbar.bootsnav ul.nav > li > a:focus,
+nav.navbar.bootsnav ul.nav > li.active > a {
+    color: #f9a02c;
+    background-color: rgba(255, 245, 230, 0.5);
+    border-radius: 5px;
 }
-nav.navbar.bootsnav ul.nav > li.dropdown span {
-    font-size: 16px;
-    margin-left: 15px;
+
+/* Responsive Adjustments for Large Screens */
+@media (min-width: 1024px) {
+    nav.navbar.bootsnav {
+        padding: 20px 0;
+    }
+
+    nav.navbar.bootsnav ul.nav > li > a {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+
+    .menu-ui-design {
+        overflow-y: hidden;
+        height: auto;
+    }
 }
-.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {color:#6a708e;}
-.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:focus,.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li.active>a{color: #e97b21;}
-/*.nav li*/
 
-
-
-/*.menu-ui-design*/
-.menu-ui-design{overflow-y:scroll;height: 350px;}
-.menu-ui-design::-webkit-scrollbar {
-    width:5px;
+/* Sticky Navbar Styles */
+.sticky-wrapper.is-sticky nav.navbar.bootsnav {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-.menu-ui-design::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 8px #000;
+
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {
+    color: #b19595;
 }
-.menu-ui-design::-webkit-scrollbar-thumb {
-  background-color: #eed705;
+
+.sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a:hover {
+    color: #e97b21;
 }
-/*.menu-ui-design*/
 
-
-
-/*.navbar-toggle */
+/* Navbar Toggle Button */
 nav.navbar.bootsnav .navbar-toggle {
-    position: relative;
     background-color: transparent;
     border: 1px solid #fa640d;
     padding: 10px;
     top: 0;
+    transition: background-color 0.3s ease, border 0.3s ease;
 }
-nav.navbar.bootsnav .navbar-toggle i{color: #fa9c43;}
-/*.navbar-toggle */
 
+nav.navbar.bootsnav .navbar-toggle i {
+    color: #fa9c43;
+}
 
+/* Menu Scrollbar */
+.menu-ui-design {
+    overflow-y: auto;
+    max-height: 400px;
+    scrollbar-width: thin;
+    scrollbar-color: #eed705 rgba(0, 0, 0, 0.2);
+}
+
+.menu-ui-design::-webkit-scrollbar {
+    width: 5px;
+}
+
+.menu-ui-design::-webkit-scrollbar-thumb {
+    background-color: #eed705;
+    border-radius: 10px;
+}
+
+.menu-ui-design::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth Hover Transitions */
+nav.navbar.bootsnav ul.nav > li > a {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 
 /*-------------------------------------
         3.  Welcome-hero
@@ -175,7 +219,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #fa9c43;}
     background: url(../images/vagwat.jpg) no-repeat;
     background-size: contain; /* Ensures the entire image is visible without cropping */
     background-position: center;
-    background-color: #000; /* Optional: Fills any empty space around the image */
+    background-color: #f3b919; /* Optional: Fills any empty space around the image */
     height: 890px;
     overflow: hidden; /* Prevents overflow outside of the section */
     transition: transform 0.3s ease-in-out; /* Smooth transition effect */
@@ -190,14 +234,14 @@ nav.navbar.bootsnav .navbar-toggle i{color: #fa9c43;}
     content: " ";
     top: 0;
     left: 0;
-    background: rgba(235, 111, 10, 0.322); /* Dark overlay */
+    background: rgba(230, 158, 25, 0.281); /* Dark overlay */
     width: 100%;
     height: 100%;
     transition: background 0.3s ease-in-out; /* Smooth transition for overlay */
 }
 
 .welcome-hero:hover:before {
-    background: rgba(219, 120, 6, 0.356); /* Darker overlay on hover */
+    background: rgba(212, 199, 184, 0.356); /* Darker overlay on hover */
 }
 
 /* Optional: Adjust text or button inside the hero if needed */
@@ -495,3 +539,51 @@ nav.navbar.bootsnav .navbar-toggle i{color: #fa9c43;}
     100%  {bottom:7px;}
 }
 /*========================Thank you=================
+
+
+
+/* General Section Styling */
+.section-about {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.section-about .section-title {
+    font-size: 36px;
+    color: #d32f2f;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+/* Content Styling */
+.about-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Left Text Section */
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Right Image Section */
+.about-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-text p {
+        font-size: 16px;
+    }
+    .about-image {
+        margin-top: 20px;
+    }
+}
