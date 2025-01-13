@@ -210,49 +210,57 @@ nav.navbar.bootsnav ul.nav > li > a {
 
 /*-------------------------------------
         3.  Welcome-hero
---------------------------------------*/
+--------------------------------------*//* Default styles for desktop */
 .welcome-hero {
     display: flex;
-    align-items: flex-end; /* Align items to the bottom */
-    justify-content: center;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
     position: relative;
-    background: url(../images/vagwat.jpg) no-repeat;
-    /* background-size: contain; Ensures the entire image is visible without cropping */
-    background-position: center;
-    background-color: #f3b919; /* Optional: Fills any empty space around the image */
+    background: url(../images/vagwat.jpg) no-repeat; /* Background image */
+    background-size: cover; /* Cover the section area */
+    background-position: center; /* Center the background image */
+    background-color: #f3b919; /* Fallback color for background */
     height: 890px;
-    overflow: hidden; /* Prevents overflow outside of the section */
-    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+    overflow: hidden;
 }
 
-.welcome-hero:hover {
-    transform: scale(1.05); /* Zoom in the image slightly on hover */
+.hero-image {
+    max-width: 100%; /* Make the banner responsive */
+    height: auto;
+    padding: 20px; /* Add padding for spacing */
+    z-index: 2; /* Ensure it appears above the background */
 }
 
-.welcome-hero:before {
-    position: absolute;
-    content: " ";
-    top: 0;
-    left: 0;
-    background: rgba(230, 158, 25, 0.281); /* Dark overlay */
-    width: 100%;
-    height: 100%;
-    transition: background 0.3s ease-in-out; /* Smooth transition for overlay */
-}
-
-.welcome-hero:hover:before {
-    background: rgba(212, 199, 184, 0.356); /* Darker overlay on hover */
-}
-
-/* Optional: Adjust text or button inside the hero if needed */
-.welcome-hero .hero-text {
-    z-index: 1; /* Ensures content stays on top of the background */
+.header-text {
+    z-index: 3; /* Ensure the text is on top of the background and banner */
     padding: 20px;
     color: #fff;
     text-align: center;
     font-size: 24px;
 }
 
+/* Media query for mobile views */
+@media (max-width: 768px) {
+    /* Hide the background image for mobile */
+    .welcome-hero {
+        background: none; /* Remove the background image */
+        background-color: #f3b919; /* Retain the fallback background color */
+        padding: 20px; /* Add padding for spacing */
+        height: auto; /* Adjust height dynamically */
+    }
+
+    /* Ensure the banner image remains clear and visible */
+    .hero-image {
+        max-width: 100%; /* Ensure full responsiveness */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    /* Adjust text styles for mobile */
+    .header-text {
+        font-size: 18px; /* Smaller font for mobile */
+        padding: 10px; /* Adjust padding for better spacing */
+    }
+}
 
 /*.header-text-area*/
 .header-text h2 {
